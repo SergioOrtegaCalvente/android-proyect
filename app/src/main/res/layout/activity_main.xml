@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="215dp"
-        android:layout_height="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="9dp"
         android:layout_marginTop="35dp"
         android:text="Ingrese el primer valor"
@@ -21,7 +22,7 @@
 
     <EditText
         android:id="@+id/valor1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"
         android:layout_marginTop="9dp"
@@ -34,8 +35,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="219dp"
-        android:layout_height="41dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="9dp"
         android:layout_marginTop="6dp"
         android:text="Ingrese Segundo valor"
@@ -47,8 +48,8 @@
 
     <EditText
         android:id="@+id/valor2"
-        android:layout_width="219dp"
-        android:layout_height="43dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="3dp"
         app:layout_constraintBottom_toTopOf="@+id/resultado"
@@ -59,30 +60,40 @@
 
     <Button
         android:id="@+id/boton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:onClick="sumar"
-        android:text="Boton"
+        android:text="Sumar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/resultado"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/valor2" />
 
-    <TextView
-        android:id="@+id/resultado"
-        android:layout_width="112dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="213dp"
-        android:layout_marginEnd="77dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="9dp"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/boton"
-        app:layout_constraintTop_toBottomOf="@+id/valor2" />
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/navegador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="navegador"
+        android:text="navegador"
+        tools:onClick="navegador" />
+
+    <Button
+        android:id="@+id/llamar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="telefono"
+        android:text="llamar"
+        tools:onClick="telefono" />
+</LinearLayout>
