@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         String resul=String.valueOf(resu);
         resultad=resul;
         Intent a=new Intent(this, Main2Activity.class);
+        a.putExtra("valor",resul);
         startActivity(a);
 
     }
